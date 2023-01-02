@@ -1,0 +1,4 @@
+node_modules
+src/style.css.map
+src/style.scss
+src/game.js
