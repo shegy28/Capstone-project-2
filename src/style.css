@@ -18,7 +18,7 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
-  color: #f9faf8
+  color: #f9faf8;
 }
 
 a {
@@ -45,10 +45,8 @@ footer {
   color: #fff;
   padding: 32px 0;
   vertical-align: middle;
-  
 }
 
 footer * {
   margin: 2px;
 }
-
