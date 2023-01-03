@@ -33,3 +33,22 @@ ul {
   gap: 16px;
   list-style-type: none;
 }
+
+.main {
+  height: 75vh;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: #1f2937;
+  color: #fff;
+  padding: 32px 0;
+  vertical-align: middle;
+  
+}
+
+footer * {
+  margin: 2px;
+}
+
