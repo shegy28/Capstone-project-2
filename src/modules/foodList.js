@@ -2,7 +2,7 @@ import { getFoodList, URL } from './fetchApi.js';
 // Using getFoodItems function //
 const getMeals = async () => {
   // create an empty array
-  const meals = [];
+  const mealsArr = [];
   // await api data
   const foodList = await getFoodList(URL);
   // loop to get individual data and populate important data to our array
@@ -15,9 +15,9 @@ const getMeals = async () => {
       origin: food.strArea,
       cookinginstruction: food.strInstructions,
     };
-    meals.push(foodObj);
+    mealsArr.push(foodObj);
   });
-  return meals;
+  return mealsArr;
 };
 
 export default getMeals;
