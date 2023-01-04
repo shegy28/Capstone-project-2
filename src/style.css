@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Lato', 'roboto', sans-serif;
+  font-family: -apple-system, 'Lato', 'roboto', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   background-image: url('http://127.0.0.1:5500/dist/b190d3df533764e4f333.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,9 +17,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 20%;
-  background-color: #1f2937;
-  color: #f9faf8;
+  padding: 24px 20%;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
 }
 
 .logo {
@@ -30,7 +35,7 @@ a {
   color: #fff;
 }
 
-ul {
+.links {
   display: flex;
   margin: 0;
   padding: 0;
@@ -104,12 +109,120 @@ button {
 footer {
   width: 100%;
   text-align: center;
-  background-color: #1f2937;
+  background-color: #0a0a23;
   color: #fff;
-  padding: 22px 0;
+  border-top: 4px solid #fdb347;
+  padding: 32px 0;
   vertical-align: middle;
 }
 
 footer * {
   margin: 2px;
+}
+
+#popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f6f7;
+  z-index: 100;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 60px);
+  padding: 16px 0 16px 20px;
+}
+
+.close h1 {
+  flex: 1;
+  text-align: center;
+}
+
+.popup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.close a img {
+  width: 36px;
+  height: 36px;
+}
+
+.description {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+}
+
+#recipe-info {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+#recipe-info .recipe {
+  width: 50%;
+}
+
+#recipe-info .recipe h3 {
+  width: 100%;
+  margin: 20px 0 5px;
+  text-align: left;
+}
+
+#recipe-info .recipe ul,
+#recipe-info .recipe ol {
+  margin-left: -20px;
+}
+
+#recipe-info .recipe li {
+  margin: 8px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 54px 0;
+}
+
+form input[type=text],
+textarea {
+  padding: 0.5em;
+  border: 1px solid #b8b7b7;
+  border-radius: 4px;
+  width: 100%;
+  margin: 8px 0;
+}
+
+form textarea {
+  height: 120px;
+}
+
+form input[type=submit] {
+  width: 50%;
+  padding: 0.5em 1em;
+  align-self: center;
+  border-radius: 4px;
+  background-color: #080808;
+  color: #fff;
 }

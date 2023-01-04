@@ -15,7 +15,7 @@ const populateMeal = async () => {
       </div>
       <div class="likes">
         <p>0 Likes</p>
-        <button data-id="${food.id}" onclick="openPopupWindow()">Comment</button>
+        <button data-id="${food.id}" onclick="openPopupWindow('${food.id}')">Comment</button>
       </div>
       </div>
         `;
