@@ -1,8 +1,12 @@
 import './style.css';
 import loadFoodDetails from './modules/populatePopupWindow.js';
 // import { addComment } from './modules/comments.js'
-
+import populateMeal from './modules/populate.js';
 // let food_ID = '';
+
+window.addEventListener('load', () => {
+  populateMeal();
+});
 
 const openPopupWindow = async (foodId) => {
   await loadFoodDetails(foodId);
@@ -12,14 +16,6 @@ const openPopupWindow = async (foodId) => {
 };
 
 window.openPopupWindow = openPopupWindow;
-
-const container = document.querySelector('.main');
-const button = document.createElement('button');
-button.innerHTML = 'Click me';
-button.addEventListener('click', () => {
-  openPopupWindow('52767');
-});
-container.appendChild(button);
 
 // const form = document.getElementById('form');
 
