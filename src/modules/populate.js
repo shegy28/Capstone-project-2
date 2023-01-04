@@ -10,12 +10,12 @@ const populateMeal = async () => {
       <div><img src="${food.image}" alt="${food.name}"></div>
       <div class="card-title">
         <h2>${food.name}</h2>
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined card-likes" data-id="${food.id}">
           favorite
         </span>
       </div>
       <div class="likes">
-        <p>0 Likes</p>
+        <p data-id="${food.id}" class="like-counter"></p>
         <button data-id="${food.id}" onclick="openPopupWindow('${food.id}')">Comment</button>
       </div>
       </div>
