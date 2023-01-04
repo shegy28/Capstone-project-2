@@ -3,6 +3,7 @@ import getMeals from './foodList.js';
 
 const populateMeal = async () => {
   const foods = await getMeals();
+  grid.innerHTML = '';
   foods.forEach((food) => {
     const pop = `
         <div class="grid-item">
