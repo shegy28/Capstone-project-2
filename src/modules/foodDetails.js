@@ -11,7 +11,7 @@ const getFoodDetails = async (foodId) => {
     food.image = data.strMealThumb;
     food.category = data.strCategory;
     food.origin = data.strArea;
-    const steps = data.strInstructions.split('\n');
+    const steps = data.strInstructions.split('\r\n');
     food.steps = steps;
     const ingredients = [];
     const measure = [];

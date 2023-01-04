@@ -127,7 +127,7 @@ footer * {
 
 #popup {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -168,6 +168,20 @@ footer * {
   margin: 0 auto;
 }
 
+#food-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.title {
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  padding: 8px 0;
+}
+
 .div {
   display: flex;
   justify-content: space-between;
@@ -198,11 +212,15 @@ footer * {
   margin-left: -20px;
 }
 
+#comments-list li {
+  padding-bottom: 8px;
+}
+
 #recipe-info .recipe li {
   margin: 8px 0;
 }
 
-form {
+#add-comment {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -210,7 +228,16 @@ form {
   padding: 54px 0;
 }
 
-form input[type=text],
+#comments-title {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#add-comment input[type=text],
 textarea {
   padding: 0.5em;
   border: 1px solid #b8b7b7;
@@ -219,15 +246,31 @@ textarea {
   margin: 8px 0;
 }
 
-form textarea {
-  height: 120px;
+#add-comment input[type=submit] {
+  margin-top: 16px;
+  padding: 8px 32px;
+  align-self: flex-start;
+  border: none;
+  border-radius: 4px;
+  background-color: #ec5242;
+  color: #fff;
 }
 
-form input[type=submit] {
-  width: 50%;
-  padding: 0.5em 1em;
-  align-self: center;
-  border-radius: 4px;
-  background-color: #080808;
+#add-comment input[type=submit]:hover {
+  background-color: #234342;
   color: #fff;
+}
+
+#add-comment h2 {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#comments-list {
+  list-style-type: none;
+  text-indent: -40px;
 }
