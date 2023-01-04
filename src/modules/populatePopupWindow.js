@@ -153,6 +153,7 @@ const loadFoodDetails = async (foodId) => {
   closeA.addEventListener('click', () => {
     document.querySelector('#popup').style.display = 'none';
     document.body.style.overflowY = 'scroll';
+    document.querySelector('.main').innerHTML = '';
   });
 };
 
