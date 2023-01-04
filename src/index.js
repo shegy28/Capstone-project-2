@@ -1,26 +1,25 @@
 import './style.css';
-import { loadFoodDetails } from './modules/populatePopupWindow.js'
+import loadFoodDetails from './modules/populatePopupWindow.js';
 // import { addComment } from './modules/comments.js'
 
-let food_ID = '';
+// let food_ID = '';
 
-  const container = document.querySelector(".main");
-  var button = document.createElement("button");
-  button.innerHTML = "Click me";
-  button.addEventListener("click", function() {
-    openPopupWindow('52767');
-  });
-  container.appendChild(button);
-
-const openPopupWindow = async (foodId) => {  
+const openPopupWindow = async (foodId) => {
   await loadFoodDetails(foodId);
   document.body.style.overflowY = 'hidden';
   document.querySelector('#popup').style.display = 'block';
-  food_ID = foodId;
+  // food_ID = foodId;
 };
 
 window.openPopupWindow = openPopupWindow;
 
+const container = document.querySelector('.main');
+const button = document.createElement('button');
+button.innerHTML = 'Click me';
+button.addEventListener('click', () => {
+  openPopupWindow('52767');
+});
+container.appendChild(button);
 
 // const form = document.getElementById('form');
 

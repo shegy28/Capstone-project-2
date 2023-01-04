@@ -1,6 +1,6 @@
-import { getFoodDetails } from './foodDetails.js';
+import getFoodDetails from './foodDetails.js';
 import closeIcon from '../images/close_menu.png';
-import { getComments } from './comments.js';
+import getComments from './comments.js';
 // const loadComments = async (foodId) => {
 //   const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`;
 //   const options = {
@@ -13,9 +13,9 @@ import { getComments } from './comments.js';
 //   const response = await fetch(url, options);
 //   const data = await response.json();
 //   return data;
-// }; 
+// };
 
-export const loadFoodDetails = async (foodId) => {
+const loadFoodDetails = async (foodId) => {
   const food = await getFoodDetails(foodId);
   const comments = await getComments(foodId);
 
@@ -37,13 +37,13 @@ export const loadFoodDetails = async (foodId) => {
   const closeImg = document.createElement('img');
 
   closeImg.setAttribute('src', closeIcon);
-  closeImg.setAttribute('alt','Close');
+  closeImg.setAttribute('alt', 'Close');
   closeA.appendChild(closeImg);
   closeDiv.appendChild(closeA);
   popupDiv.appendChild(closeDiv);
 
   const foodDescription = document.createElement('div');
-  foodDescription.classList.add('description')
+  foodDescription.classList.add('description');
 
   const img = document.createElement('img');
   img.id = 'food-image';
@@ -55,9 +55,9 @@ export const loadFoodDetails = async (foodId) => {
   div.classList.add('div');
 
   const h21 = document.createElement('h2');
-  h21.innerText = 'Category : ' + food.category;
+  h21.innerText = `Category : ${food.category}`;
   const h22 = document.createElement('h2');
-  h22.innerText = 'Origin : ' + food.origin;
+  h22.innerText = `Origin : ${food.origin}`;
   div.appendChild(h21);
   div.appendChild(h22);
   foodDescription.appendChild(div);
@@ -74,7 +74,7 @@ export const loadFoodDetails = async (foodId) => {
 
   const ul1 = document.createElement('ul');
 
-  for (let i = 0; i < food.ingredients.length; i++) {
+  for (let i = 0; i < food.ingredients.length; i += 1) {
     const item = food.ingredients[i];
     const li = document.createElement('li');
     li.textContent = item;
@@ -92,7 +92,7 @@ export const loadFoodDetails = async (foodId) => {
   steps.appendChild(h32);
 
   const ol1 = document.createElement('ol');
-  for (let i = 0; i < food.steps.length; i++) {
+  for (let i = 0; i < food.steps.length; i += 1) {
     const item = food.steps[i];
     const li = document.createElement('li');
     li.textContent = item;
@@ -109,15 +109,15 @@ export const loadFoodDetails = async (foodId) => {
   commentsDiv.appendChild(h23);
 
   const ul2 = document.createElement('ul');
-  for (let i = 0; i < comments.length; i++) {
-    const item = comments[i].creation_date + ' ' + comments[i].username + ': ' + comments[i].comment ;
+  for (let i = 0; i < comments.length; i += 1) {
+    const item = `${comments[i].creation_date} ${comments[i].username}: ${comments[i].comment}`;
     const li = document.createElement('li');
     li.textContent = item;
     ul2.appendChild(li);
   }
   commentsDiv.appendChild(ul2);
   foodDescription.appendChild(commentsDiv);
-  
+
   const form = document.createElement('form');
   form.id = 'form';
   const h24 = document.createElement('h2');
@@ -150,8 +150,10 @@ export const loadFoodDetails = async (foodId) => {
   popupDiv.appendChild(foodDescription);
   document.querySelector('.main').appendChild(popupDiv);
 
-  closeA.addEventListener('click', function() {
+  closeA.addEventListener('click', () => {
     document.querySelector('#popup').style.display = 'none';
     document.body.style.overflowY = 'scroll';
   });
 };
+
+export default loadFoodDetails;

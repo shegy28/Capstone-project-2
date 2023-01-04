@@ -1,6 +1,6 @@
 body {
-  font-family: -apple-system, 'Lato', 'roboto', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;;
-  background-color: #f5f6f7;;
+  font-family: -apple-system, 'Lato', 'roboto', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f6f7;
   color: #000;
   margin: 0;
 }
@@ -79,16 +79,6 @@ footer * {
   text-align: center;
 }
 
-.close a img {
-  width: 36px;
-  height: 36px;
-}
-
-.description{
-  width: 60%;
-  margin: 0 auto;
-}
-
 .popup img {
   display: block;
   width: 100%;
@@ -96,10 +86,13 @@ footer * {
   margin: 0 auto;
 }
 
-#recipe-info{
-  width: 50%;
-  display: flex;
-  gap: 10px;
+.close a img {
+  width: 36px;
+  height: 36px;
+}
+
+.description {
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -111,7 +104,7 @@ footer * {
   padding: 8px 0;
 }
 
-#recipe-info{
+#recipe-info {
   width: 100%;
   display: flex;
   gap: 8px;
@@ -128,11 +121,12 @@ footer * {
   text-align: left;
 }
 
-#recipe-info .recipe ul, #recipe-info .recipe ol {
+#recipe-info .recipe ul,
+#recipe-info .recipe ol {
   margin-left: -20px;
 }
 
-#recipe-info .recipe li { 
+#recipe-info .recipe li {
   margin: 8px 0;
 }
 
@@ -144,7 +138,8 @@ form {
   padding: 54px 0;
 }
 
-form input[type=text], textarea {
+form input[type=text],
+textarea {
   padding: 0.5em;
   border: 1px solid #b8b7b7;
   border-radius: 4px;
