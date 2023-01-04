@@ -2,10 +2,32 @@ import './style.css';
 import loadFoodDetails from './modules/populatePopupWindow.js';
 // import { addComment } from './modules/comments.js'
 import populateMeal from './modules/populate.js';
+import { createLikes } from './modules/getLikes';
+import showlike from './modules/showLike';
 // let food_ID = '';
 
-window.addEventListener('load', () => {
-  populateMeal();
+// window.addEventListener('load', async() => {
+//   await populateMeal();
+
+// });
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await populateMeal();
+    const textLikes = document.querySelectorAll('.like-counter');
+    textLikes.forEach(async (textLike) => {
+    await showlike(textLike);
+    });
+});
+
+window.addEventListener('click', async (e) => {
+    const likeBtn = e.target;
+    if (likeBtn.classList.contains('card-likes')) {
+      const mealId = likeBtn.getAttribute('data-id');
+      console.log(mealId);
+      await createLikes(mealId);
+      const txtlike = likeBtn.parentElement.nextElementSibling.firstElementChild;
+      await showlike(txtlike);
+    }
 });
 
 const openPopupWindow = async (foodId) => {
