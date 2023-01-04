@@ -1,12 +1,12 @@
 import './style.css';
 import loadFoodDetails from './modules/populatePopupWindow.js';
 // import { addComment } from './modules/comments.js'
-import populateMeal from './modules/populate.js';
+// import populateMeal from './modules/populate.js';
 // let food_ID = '';
 
-window.addEventListener('load', () => {
-  populateMeal();
-});
+// window.addEventListener('load', () => {
+//   populateMeal();
+// });
 
 const openPopupWindow = async (foodId) => {
   await loadFoodDetails(foodId);
