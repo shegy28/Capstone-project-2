@@ -1,4 +1,4 @@
-import { getLikes } from "./getLikes.js";
+import { getLikes } from './getLikes.js';
 
 const showlike = async (txtLike) => {
   const mealId = txtLike.getAttribute('data-id');
