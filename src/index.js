@@ -4,6 +4,7 @@ import populateMeal from './modules/populate.js';
 
 import { createLikes } from './modules/getLikes.js';
 import showlike from './modules/showLike.js';
+import counter from './modules/mealCounter.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await populateMeal();
@@ -11,6 +12,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   textLikes.forEach(async (textLike) => {
     await showlike(textLike);
   });
+  const mealCounter = document.querySelector('.meal-counter');
+  const count = document.querySelectorAll('.grid-item');
+  counter(mealCounter, count);
 });
 
 window.addEventListener('click', async (e) => {
