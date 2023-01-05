@@ -1,4 +1,4 @@
-const LikeAPI  = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/iD8cGInPlC4yvUbCyKZp/likes';
+const LikeAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/iD8cGInPlC4yvUbCyKZp/likes';
 
 const createLikes = async (id) => {
   await fetch(LikeAPI, {
