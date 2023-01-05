@@ -106,9 +106,13 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://shegy28.github.io/Capstone-project-2/dist)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Description Video Link <a name="live-demo"></a>
+
+- [Description Video Link](https://www.youtube.com/watch?v=cIT4YY2qq0M)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
