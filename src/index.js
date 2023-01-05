@@ -1,7 +1,6 @@
 import './style.css';
-import loadFoodDetails from './modules/populatePopupWindow.js';
+import loadElements from './modules/populatePopupWindow.js';
 import populateMeal from './modules/populate.js';
-
 import { createLikes } from './modules/getLikes.js';
 import showlike from './modules/showLike.js';
 import counter from './modules/mealCounter.js';
@@ -28,9 +27,9 @@ window.addEventListener('click', async (e) => {
 });
 
 const openPopupWindow = async (foodId) => {
-  await loadFoodDetails(foodId);
-  document.body.style.overflowY = 'hidden';
+  await loadElements(foodId);
   document.querySelector('#popup').style.display = 'block';
+  document.body.style.overflowY = 'hidden';
 };
 
 window.openPopupWindow = openPopupWindow;
