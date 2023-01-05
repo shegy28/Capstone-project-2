@@ -134,8 +134,18 @@ footer * {
   }
 }
 
+@keyframes slideToTopRight {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100%, -100%);
+  }
+}
+
 .close_popup {
   transform: scale(0);
+  transition: transform 2s;
 }
 
 #popup {

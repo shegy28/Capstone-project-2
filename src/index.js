@@ -25,8 +25,8 @@ window.addEventListener('click', async (e) => {
 
 const openPopupWindow = async (foodId) => {
   await loadElements(foodId);
-  document.body.style.overflowY = 'hidden';
   document.querySelector('#popup').style.display = 'block';
+  document.body.style.overflowY = 'hidden';
 };
 
 window.openPopupWindow = openPopupWindow;

@@ -17,8 +17,8 @@ function topElement() {
   a.appendChild(img);
   div.appendChild(a);
   a.addEventListener('click', () => {
-    document.querySelector('#popup').classList.add('close_popup');
     document.body.style.overflowY = 'scroll';
+    document.querySelector('#popup').classList.add('close_popup');
   });
   return div;
 }
