@@ -1,4 +1,4 @@
-import totalComments from "./countComments.js";
+import countComments from "./countComments.js";
 
 const getComments = async (foodId) => {
   const requestURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/iD8cGInPlC4yvUbCyKZp/comments?item_id=${foodId}`;
@@ -39,7 +39,7 @@ export function commentsElement(arrComments) {
   const ul = document.createElement('ul');
   ul.id = 'comments-list';
   fillCommentsList(arrComments, ul);
-  h2.innerText = `Comments (${totalComments(ul)})`;
+  h2.innerText = `Comments (${countComments(ul)})`;
   commentsDiv.appendChild(ul);
   return commentsDiv;
 }

@@ -1,5 +1,5 @@
 import getComments, { storeComment, fillCommentsList } from './comments.js';
-import totalComments from './countComments.js';
+import countComments from './countComments.js';
 
 const addTitleElement = (parentElement) => {
   const h2 = document.createElement('h2');
@@ -61,7 +61,7 @@ const addFormElement = (foodId) => {
           const comments = await getComments(foodId);
           fillCommentsList(comments, ul);
           clearForm();
-          document.querySelector('#comments-title').innerText = `Comments (${totalComments(ul)})`;
+          document.querySelector('#comments-title').innerText = `Comments (${countComments(ul)})`;
         }
       });
   });

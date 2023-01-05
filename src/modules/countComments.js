@@ -1,5 +1,5 @@
-const totalComments = (listElement) => {
+export default function countComments (listElement) {
   return listElement.getElementsByTagName('li').length;
 }
 
-export default totalComments;
+// module.exports = countComments;
