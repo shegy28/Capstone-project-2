@@ -1,4 +1,4 @@
-import countComments from "./countComments.js";
+import countComments from './countComments.js';
 
 const getComments = async (foodId) => {
   const requestURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/iD8cGInPlC4yvUbCyKZp/comments?item_id=${foodId}`;
@@ -29,7 +29,7 @@ export const fillCommentsList = async (arrComments, ulElement) => {
     li.textContent = item;
     ulElement.appendChild(li);
   }
-}
+};
 
 export function commentsElement(arrComments) {
   const commentsDiv = document.createElement('div');

@@ -5,7 +5,7 @@ const addTitleElement = (parentElement) => {
   const h2 = document.createElement('h2');
   h2.innerText = 'Add a comment';
   parentElement.appendChild(h2);
-}
+};
 
 const addNameTextBox = (parentElement) => {
   const input = document.createElement('input');
@@ -15,7 +15,7 @@ const addNameTextBox = (parentElement) => {
   input.placeholder = 'Your name';
   input.required = true;
   parentElement.appendChild(input);
-}
+};
 
 const addCommentTextBox = (parentElement) => {
   const input = document.createElement('input');
@@ -25,7 +25,7 @@ const addCommentTextBox = (parentElement) => {
   input.placeholder = 'Your insights';
   input.required = true;
   parentElement.appendChild(input);
-}
+};
 
 const addSubmitButton = (parentElement) => {
   const submit = document.createElement('input');
@@ -33,7 +33,7 @@ const addSubmitButton = (parentElement) => {
   submit.id = 'submit';
   submit.value = 'Comment';
   parentElement.appendChild(submit);
-}
+};
 
 const addFormElement = (foodId) => {
   const form = document.createElement('form');
@@ -66,6 +66,6 @@ const addFormElement = (foodId) => {
       });
   });
   return form;
-}
+};
 
 export default addFormElement;

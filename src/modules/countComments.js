@@ -1,4 +1,4 @@
-export default function countComments (listElement) {
+export default function countComments(listElement) {
   return listElement.getElementsByTagName('li').length;
 }
 

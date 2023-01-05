@@ -1,4 +1,4 @@
-import countComments from "../src/modules/countComments.js";
+import countComments from '../src/modules/countComments.js';
 
 describe('Counter tests', () => {
   test('Counts loaded comments in list', () => {

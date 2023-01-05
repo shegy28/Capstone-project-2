@@ -1,7 +1,7 @@
 import getFoodDetails, { foodDetailsElement } from './foodDetails.js';
 import closeIcon from '../images/close_menu.png';
 import getComments, { commentsElement } from './comments.js';
-import addFormElement from './addComment.js'
+import addFormElement from './addComment.js';
 
 function topElement() {
   const div = document.createElement('div');
