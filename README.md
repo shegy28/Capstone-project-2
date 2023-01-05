@@ -185,6 +185,6 @@ Feel free to check the [issues page](https://github.com/shegy28/Capstone-project
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
