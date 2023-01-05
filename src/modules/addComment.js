@@ -40,6 +40,7 @@ const addFormElement = (foodId) => {
   form.id = 'add-comment';
   addTitleElement(form);
   addNameTextBox(form);
+  addCommentTextBox(form);
   addSubmitButton(form);
 
   const clearForm = async () => {

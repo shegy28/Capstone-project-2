@@ -1,7 +1,6 @@
 import './style.css';
 import loadElements from './modules/populatePopupWindow.js';
 import populateMeal from './modules/populate.js';
-
 import { createLikes } from './modules/getLikes.js';
 import showlike from './modules/showLike.js';
 
