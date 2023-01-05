@@ -1,5 +1,3 @@
-const countComments = (listElement) => {
-  return listElement.getElementsByTagName('li').length;
-}
+const countComments = (listElement) => listElement.getElementsByTagName('li').length;
 
 export default countComments;
