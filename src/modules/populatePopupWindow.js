@@ -1,7 +1,7 @@
 import getFoodDetails, { foodDetailsElement } from './foodDetails.js';
 import closeIcon from '../images/close_menu.png';
 import getComments, { commentsElement } from './comments.js';
-import addCommentElement from './addComment.js'
+import addFormElement from './addComment.js'
 
 function topElement() {
   const div = document.createElement('div');
@@ -35,7 +35,7 @@ const loadElements = async (foodId) => {
   foodDescription.classList.add('description');
   foodDescription.appendChild(foodDetailsElement(food));
   foodDescription.appendChild(commentsElement(comments));
-  foodDescription.appendChild(addCommentElement(foodId));
+  foodDescription.appendChild(addFormElement(foodId));
   popupDiv.appendChild(foodDescription);
   document.querySelector('.main').appendChild(popupDiv);
 };
