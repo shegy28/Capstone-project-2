@@ -1,5 +1,5 @@
 import './style.css';
-import loadFoodDetails from './modules/populatePopupWindow.js';
+import loadElements from './modules/populatePopupWindow.js';
 import populateMeal from './modules/populate.js';
 
 import { createLikes } from './modules/getLikes.js';
@@ -24,7 +24,7 @@ window.addEventListener('click', async (e) => {
 });
 
 const openPopupWindow = async (foodId) => {
-  await loadFoodDetails(foodId);
+  await loadElements(foodId);
   document.body.style.overflowY = 'hidden';
   document.querySelector('#popup').style.display = 'block';
 };

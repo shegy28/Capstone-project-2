@@ -125,6 +125,19 @@ footer * {
   margin: 2px;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.close_popup {
+  transform: scale(0);
+}
+
 #popup {
   display: none;
   position: fixed;
@@ -136,6 +149,7 @@ footer * {
   z-index: 100;
   overflow-y: scroll;
   overflow-x: hidden;
+  animation: slideUp 2s;
 }
 
 .close {
@@ -172,7 +186,7 @@ footer * {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0 auto;
+  margin: -52px auto 0 auto;
 }
 
 .title {
